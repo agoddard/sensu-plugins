@@ -20,7 +20,9 @@ include_recipe 'git'
 gem 'sensu-plugin'
 
 
-gem 'carrot-top' if node.attribute? "rabbitmq"
+if node.attribute? "rabbitmq"
+  gem 'carrot-top'
+end
 
 
 directory node.sensu.community_plugins.directory do
