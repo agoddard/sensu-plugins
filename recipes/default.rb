@@ -17,6 +17,11 @@
 # limitations under the License.
 #
 include_recipe 'git'
+gem 'sensu-plugin'
+
+
+gem 'carrot-top' if node.attribute? "rabbitmq"
+
 
 directory node.sensu.community_plugins.directory do
   recursive true
