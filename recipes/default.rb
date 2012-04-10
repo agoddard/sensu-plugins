@@ -20,11 +20,6 @@ include_recipe 'git'
 gem 'sensu-plugin'
 
 
-if node.attribute? "rabbitmq"
-  gem_package 'carrot-top'
-end
-
-
 directory node.sensu.community_plugins.directory do
   recursive true
   owner node.sensu.user if node['platform'] != 'windows'
