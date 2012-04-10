@@ -21,7 +21,7 @@ gem 'sensu-plugin'
 
 
 if node.attribute? "rabbitmq"
-  gem 'carrot-top'
+  gem_package 'carrot-top'
 end
 
 
