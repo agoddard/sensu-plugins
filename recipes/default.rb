@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 include_recipe 'git'
-gem 'sensu-plugin'
+gem_package 'sensu-plugin'
 
 
 directory node.sensu.community_plugins.directory do
